@@ -1,23 +1,3 @@
-"""
-Simulating the force of gravity on cellestial bodies and galaxy formation using Newtons laws,
-with the Euler Method of Integration.
-Measures the change in velocity and displacement after every time_step
-Euler method assumes constant acceletation throught the whole timestep. This normally doesnt impact on results
-to much but becomes noticible if accceleration rapidly increases like when two objects in close proximity pass by one another
-and can lead to unequal calcualtion of force of gravity and send objects
-spiraling out to infinity. An updatated version will be developed soon using the 2nd order
-leapfrog integration method which gives more accurate values. This will mean no spiriling to infinity when objects pass in
-close proximity to eachother and will lead to much better results for galaxy formation.
-The Euler method is sympletic meaning that grabitational orbits should stay stable. A small enough time_step
-will ensure that the acceleration is measured as accurate as possible and will lead to a more accurate simulation.
-Every frame:
-- Calculate the weight of each object to every other object
-- Reslove the weight vector into x and y magnitudes
-- Use Euler method to update velocity and position with the time_step
-- Check if particles have collided and if so use conservation of momentum to update new particles mass and velocity
-- Draw new objects on screen
-"""
-
 import math
 import os
 import random
